@@ -1,7 +1,5 @@
 
-/**
- * This class encapsulates a basic grammar test.
- */
+
 
 import java.io.IOException;
 //ANTLR packages
@@ -11,6 +9,9 @@ import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.tree.*;
 import org.antlr.v4.gui.Trees;
 
+/**
+ * This class launches the compiler project.
+ */
 
 public class TinyTest{
 

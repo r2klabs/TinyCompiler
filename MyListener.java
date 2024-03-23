@@ -2,6 +2,11 @@ import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
+/**
+ * This class extends the tinyBaseListener created by ANTLR4. The bulk of my compiler
+ * is built into this class file.
+ */
+
 public class MyListener extends  tinyBaseListener{
 
     @Override
@@ -24,6 +29,7 @@ public class MyListener extends  tinyBaseListener{
 
         String child = ctx.getChild(0).getText();
         System.out.println(child +" ");
+        
     }
 
     @Override
