@@ -13,6 +13,7 @@ public class MyListener extends  tinyBaseListener{
     public void enterAssign_stmt(tinyParser.Assign_stmtContext ctx) {
         // TODO Auto-generated method stub
         super.enterAssign_stmt(ctx);
+        System.out.println(ctx.getText());
     }
 
     @Override
