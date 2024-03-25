@@ -1,6 +1,10 @@
 // Generated from tiny.g4 by ANTLR 4.13.1
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
+//Don't really change this file, that would bad.
+import java.io.*;
+
+
 /**
  * This class provides an empty implementation of {@link tinyVisitor},
  * which can be extended to create a visitor which only needs to handle a subset
