@@ -105,12 +105,9 @@ public class tinyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_program; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof tinyListener ) ((tinyListener)listener).enterProgram(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof tinyListener ) ((tinyListener)listener).exitProgram(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof tinyVisitor ) return ((tinyVisitor<? extends T>)visitor).visitProgram(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -154,12 +151,9 @@ public class tinyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_stmt_list; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof tinyListener ) ((tinyListener)listener).enterStmt_list(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof tinyListener ) ((tinyListener)listener).exitStmt_list(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof tinyVisitor ) return ((tinyVisitor<? extends T>)visitor).visitStmt_list(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -234,12 +228,9 @@ public class tinyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_stmt; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof tinyListener ) ((tinyListener)listener).enterStmt(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof tinyListener ) ((tinyListener)listener).exitStmt(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof tinyVisitor ) return ((tinyVisitor<? extends T>)visitor).visitStmt(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -299,12 +290,9 @@ public class tinyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_assign_stmt; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof tinyListener ) ((tinyListener)listener).enterAssign_stmt(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof tinyListener ) ((tinyListener)listener).exitAssign_stmt(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof tinyVisitor ) return ((tinyVisitor<? extends T>)visitor).visitAssign_stmt(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -343,12 +331,9 @@ public class tinyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_read_stmt; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof tinyListener ) ((tinyListener)listener).enterRead_stmt(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof tinyListener ) ((tinyListener)listener).exitRead_stmt(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof tinyVisitor ) return ((tinyVisitor<? extends T>)visitor).visitRead_stmt(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -385,12 +370,9 @@ public class tinyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_write_stmt; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof tinyListener ) ((tinyListener)listener).enterWrite_stmt(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof tinyListener ) ((tinyListener)listener).exitWrite_stmt(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof tinyVisitor ) return ((tinyVisitor<? extends T>)visitor).visitWrite_stmt(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -430,12 +412,9 @@ public class tinyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_id_list; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof tinyListener ) ((tinyListener)listener).enterId_list(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof tinyListener ) ((tinyListener)listener).exitId_list(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof tinyVisitor ) return ((tinyVisitor<? extends T>)visitor).visitId_list(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -509,12 +488,9 @@ public class tinyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_expr_list; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof tinyListener ) ((tinyListener)listener).enterExpr_list(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof tinyListener ) ((tinyListener)listener).exitExpr_list(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof tinyVisitor ) return ((tinyVisitor<? extends T>)visitor).visitExpr_list(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -591,12 +567,9 @@ public class tinyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_expr; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof tinyListener ) ((tinyListener)listener).enterExpr(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof tinyListener ) ((tinyListener)listener).exitExpr(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof tinyVisitor ) return ((tinyVisitor<? extends T>)visitor).visitExpr(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -670,12 +643,9 @@ public class tinyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_factor; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof tinyListener ) ((tinyListener)listener).enterFactor(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof tinyListener ) ((tinyListener)listener).exitFactor(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof tinyVisitor ) return ((tinyVisitor<? extends T>)visitor).visitFactor(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -724,12 +694,9 @@ public class tinyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_integer; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof tinyListener ) ((tinyListener)listener).enterInteger(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof tinyListener ) ((tinyListener)listener).exitInteger(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof tinyVisitor ) return ((tinyVisitor<? extends T>)visitor).visitInteger(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -772,12 +739,9 @@ public class tinyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_op; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof tinyListener ) ((tinyListener)listener).enterOp(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof tinyListener ) ((tinyListener)listener).exitOp(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof tinyVisitor ) return ((tinyVisitor<? extends T>)visitor).visitOp(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -819,12 +783,9 @@ public class tinyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_ident; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof tinyListener ) ((tinyListener)listener).enterIdent(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof tinyListener ) ((tinyListener)listener).exitIdent(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof tinyVisitor ) return ((tinyVisitor<? extends T>)visitor).visitIdent(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
